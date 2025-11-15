@@ -321,23 +321,26 @@ body {
   box-shadow: none;
 }
 .skeleton {
-  background: linear-gradient(90deg, #ddd, #f1f1f1, #ddd);
-  background-size: 400% 400%;
-  animation: shimmer 1.3s infinite;
-  border-radius: 10px;
+  background:#e6e6e6;
+  border-radius:10px;
+  animation:pulse 1.4s infinite;
 }
 
-@keyframes shimmer {
-  0% { background-position: -200px 0; }
-  100% { background-position: 200px 0; }
-}
-
-.day.pending {
-  background:#ffe5e5;
-  border:1px solid #ff8585;
+@keyframes pulse {
+  0% { opacity:0.6; }
+  50% { opacity:1; }
+  100% { opacity:0.6; }
 }
 
 .day.completed {
-  background:#d4ffe2;
-  border:1px solid #4ad763;
+  background:#b6ffc7;
+  border:2px solid #16c043;
+}
+.day.incomplete {
+  background:#ffd4d4;
+  border:2px solid #ff6f6f;
+}
+.day.today {
+  box-shadow:0 0 8px #0048ff;
+  border:3px solid #407bff;
 }
