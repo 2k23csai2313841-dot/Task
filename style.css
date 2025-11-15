@@ -320,3 +320,24 @@ body {
   transform: scale(0.96);
   box-shadow: none;
 }
+.skeleton {
+  background: linear-gradient(90deg, #ddd, #f1f1f1, #ddd);
+  background-size: 400% 400%;
+  animation: shimmer 1.3s infinite;
+  border-radius: 10px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.day.pending {
+  background:#ffe5e5;
+  border:1px solid #ff8585;
+}
+
+.day.completed {
+  background:#d4ffe2;
+  border:1px solid #4ad763;
+}
