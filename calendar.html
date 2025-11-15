@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <h1>📅 Task Manager</h1>
+  <button onclick="logout()">🚪 Logout</button>
+</header>
+
+<div class="settings-row">
+  <label>⏰ Reminder Time:</label>
+  <input type="time" id="notifyTime"/>
+  <button id="saveSettings" class="mini-btn">Save</button>
+</div>
+
+<div class="progress-container">
+  <div id="progressBar"></div>
+  <span id="progressText">0% Done</span>
+</div>
+
+<div class="calendar-header">
+  <button id="prev">⟵</button>
+  <h2 id="monthYear"></h2>
+  <button id="next">⟶</button>
+</div>
+
+<div id="calendar" class="calendar"></div>
+
+<div id="taskModal" class="modal hidden">
+  <div class="modal-box">
+    <h3 id="modalTitle"></h3>
+    <div id="taskList"></div>
+
+    <input type="text" id="taskInput" placeholder="Add task..." />
+    <button id="addTask" class="btn">Add</button>
+
+    <button class="btn danger" onclick="closeTaskModal()">Close</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

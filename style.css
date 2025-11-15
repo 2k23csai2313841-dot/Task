@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #eef3ff;
+}
+
+/* LOGIN PAGE */
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
+.login-card {
+  background: white;
+  padding: 35px;
+  width: 330px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn .6s ease;
+}
+
+.login-card input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 12px;
+  border: 2px solid #cdd7ff;
+  border-radius: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border:none;
+  background:#2b47ff;
+  color:white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+}
+
+/* APP HEADER */
+.app-header {
+  background: #4c8bff;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SETTINGS TIME ROW */
+.settings-row {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  background:white;
+  width:80%;
+  margin:15px auto;
+  padding:12px;
+  border-radius:10px;
+  border:2px solid #cdd7ff;
+}
+
+.settings-row input {
+  padding: 8px;
+  border:2px solid #dbe5ff;
+  border-radius:6px;
+}
+
+.mini-btn {
+  background:#2563eb;
+  color:white;
+  padding:8px 12px;
+  border:none;
+  border-radius:6px;
+}
+
+/* CALENDAR */
+.calendar-header {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.calendar {
+  width:95%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:10px;
+}
+
+.day {
+  background:white;
+  border:2px solid #dce7ff;
+  padding:15px;
+  min-height:110px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.day:hover { transform: scale(1.05); }
+
+.completed {
+  background:#7bf07b;
+  border-color:#2a9d27;
+}
+
+.today {
+  border:3px solid #2264ff;
+}
+
+.today.incomplete {
+  background:#ffb8b8;
+  border-color:#ff3a3a;
+}
+
+/* PROGRESS BAR */
+.progress-container{
+  width:80%;
+  margin:20px auto;
+  background:#d9e6ff;
+  height:25px;
+  border-radius:20px;
+  position:relative;
+}
+
+#progressBar {
+  height:100%;
+  background:#4c8bff;
+  border-radius:20px;
+  width:0%;
+  transition:0.5s;
+}
+
+#progressText{
+  position:absolute;
+  left:50%;
+  top:3px;
+  transform:translateX(-50%);
+  font-size:14px;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(0,0,0,0.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-box {
+  background:white;
+  width:350px;
+  padding:20px;
+  border-radius:12px;
+}
+
+.hidden { display:none; }
+
+.btn {
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  border:none;
+  background:#2b47ff;
+  color:white;
+  border-radius:6px;
+}
+
+.btn.danger {
+  background:#ff5c5c;
+}
+
+@keyframes fadeIn {
+  from { opacity:0; transform:translateY(20px);}
+  to { opacity:1; transform:translateY(0);}
+}

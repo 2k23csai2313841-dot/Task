@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-screen">
+
+<div class="login-card">
+    <h2>🔐 Task Manager</h2>
+    <p class="subtext">Login to continue</p>
+
+    <input type="text" id="userId" placeholder="User ID">
+    <input type="password" id="password" placeholder="Password">
+
+    <button class="login-btn" onclick="login()">Login</button>
+    <p id="error" class="error"></p>
+</div>
+
+<script>
+function login(){
+  let id = document.getElementById("userId").value.trim();
+  let pass = document.getElementById("password").value.trim();
+
+  if(id === "2313841" && pass === "anu"){
+    localStorage.setItem("loggedIn", "true");
+    window.location.href = "calendar.html";
+  } else {
+    document.getElementById("error").innerText = "❌ Incorrect Credentials";
+  }
+}
+
+if(localStorage.getItem("loggedIn") === "true"){
+  window.location.href = "calendar.html";
+}
+</script>
+
+</body>
+</html>

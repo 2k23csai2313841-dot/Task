@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "crons": [
+    {
+      "path": "/api/run",
+      "schedule": "* * * * *"
+    }
+  ]
+}
