@@ -229,7 +229,7 @@ body {
 
 /* ---------- INPUT FIELD ---------- */
 #taskInput {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   margin-top: 10px;
   border: 2px solid #d8e1ff;
@@ -246,7 +246,7 @@ body {
 
 /* ---------- ACTION BUTTONS ---------- */
 .btn {
-  width: 95%;
+  width: 100%;
   padding: 12px;
   margin-top: 12px;
   font-size: 15px;
