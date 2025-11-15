@@ -106,6 +106,9 @@ body {
   min-height:110px;
   border-radius:10px;
   cursor:pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .day:hover { transform: scale(1.05); }
@@ -116,8 +119,17 @@ body {
 }
 
 .today {
-  border:3px solid #2264ff;
+  position: relative;
+  background: linear-gradient(135deg, #dce6ff, #eef3ff);
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  color: #1d4ed8;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(65, 118, 255, 0.4), inset 0 0 6px rgba(255,255,255,0.6);
 }
+
 
 .today.incomplete {
   background:#ffb8b8;
@@ -321,26 +333,23 @@ body {
   box-shadow: none;
 }
 .skeleton {
-  background:#e6e6e6;
-  border-radius:10px;
-  animation:pulse 1.4s infinite;
+  background: linear-gradient(90deg, #ddd, #f1f1f1, #ddd);
+  background-size: 400% 400%;
+  animation: shimmer 1.3s infinite;
+  border-radius: 10px;
 }
 
-@keyframes pulse {
-  0% { opacity:0.6; }
-  50% { opacity:1; }
-  100% { opacity:0.6; }
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.day.pending {
+  background:#ffe5e5;
+  border:1px solid #ff8585;
 }
 
 .day.completed {
-  background:#b6ffc7;
-  border:2px solid #16c043;
-}
-.day.incomplete {
-  background:#ffd4d4;
-  border:2px solid #ff6f6f;
-}
-.day.today {
-  box-shadow:0 0 8px #0048ff;
-  border:3px solid #407bff;
+  background:#d4ffe2;
+  border:1px solid #4ad763;
 }
