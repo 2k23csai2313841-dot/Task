@@ -3,10 +3,11 @@
   "crons": [
     {
       "path": "/api/checkTasks",
-      "schedule": "35 05 * * *"
+      "schedule": "36 07 * * *"
     }
   ]
 }
+
 
 
 
