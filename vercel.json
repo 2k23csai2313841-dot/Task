@@ -2,8 +2,8 @@
   "version": 2,
   "crons": [
     {
-      "path": "/api/run",
-      "schedule": "0 22 * * *"
+      "path": "/api/checkTasks",
+      "schedule": "46 10 * * *"
     }
   ]
 }
